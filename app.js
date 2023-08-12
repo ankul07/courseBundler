@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://fcoursebundler.vercel.app",
+    origin: process.env.FRONTEND_URL,
     credentials: true,
     methods: ["POST", "GET", "PUT", "DELETE"],
   })
